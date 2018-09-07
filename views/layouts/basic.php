@@ -1,5 +1,6 @@
 <?php
 use app\assets\AppAsset;
+use yii\helpers\Html;
 
 AppAsset::register($this);
 ?>
@@ -17,6 +18,11 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
     
     <div class="container">
+        <ul class="nav nav-pills">
+          <li class="active"><?= html::a('Главная', '/yii2/web/') ?></li>
+          <li><?= html::a('Статьи', ['post/index']) ?></li>
+          <li><?= html::a('Статья', ['post/show']) ?></li>
+        </ul>
         <?= $content ?>
     </div>
 
